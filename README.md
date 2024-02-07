@@ -1,5 +1,13 @@
 # DataEngineeringProject
- 
+1.Create an environment first in your local using following command for Mac:
+python3 -m venv venv
+source venv/bin/activate
+
+2. pip install faker fastavro
+3. pip install pandas
+4. pip install pandas pyarrow
+
+
 #This project contains 3 parts: 
 Part1:
 - Create a python script which will generate dataset for covid patient - who’s health condition was critical, who also got the covid vaccine injection , data is greater than 10MB and min 2 lack of record. File format will be Avro and country - india and for 10 cities.
