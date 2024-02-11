@@ -1,10 +1,11 @@
 import pandas as pd
+import numpy as np
 import random
 import os
 
 # Define cities and hospitals
 cities = ["Pune", "Hyderabad", "Mumbai", "Delhi", "Bhubaneshwar", "Goa", "Bhopal", "Noida", "Indore", "Jhansi"]
-num_cities = 20  # Number of cities to include in the dataset
+num_records = 200000
 
 # Generate data for hospitals
 def generate_hospitals_data(city):
@@ -19,6 +20,7 @@ def generate_hospitals_data(city):
 
         hospital_data = {
             "Hospital_Name": hospital_name,
+            "City": city,
             "Beds_Available": beds_available,
             "COVID_Beds_Available": covid_beds_available,
             "NonCOVID_Beds_Available": non_covid_beds_available,
@@ -30,7 +32,7 @@ def generate_hospitals_data(city):
 
 # Generate dataset
 hospital_records = []
-for city in cities:  # Remove random.sample line
+for city in cities:
     hospitals_data = generate_hospitals_data(city)
     hospital_records.extend(hospitals_data)
 
