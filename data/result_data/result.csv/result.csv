@@ -1,0 +1,4 @@
+City,Covid_beds_citywise,Patient_ID,Health_Condition,Vaccine_Status,Country,Hospital_Name,Beds_Available,COVID_Beds_Available,NonCOVID_Beds_Available,p_count,patient_no_beds
+Pune,1838320,27,Critical,Received,India,Punebd5f5b4f-d342-4285-843c-20cee4b2aefd,79,36,43,16712,1821608
+Pune,1838320,27,Critical,Received,India,Puned8647659-c735-4008-9ac0-04a0d05310e0,65,45,20,16712,1821608
+Pune,1838320,27,Critical,Received,India,Punee65d1c8c-609b-42f9-bd1f-9533c50f0d4a,75,29,46,16712,1821608

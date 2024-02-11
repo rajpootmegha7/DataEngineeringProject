@@ -2,10 +2,15 @@ import pandas as pd
 import numpy as np
 import random
 import os
-
+import uuid
 # Define cities and hospitals
 cities = ["Pune", "Hyderabad", "Mumbai", "Delhi", "Bhubaneshwar", "Goa", "Bhopal", "Noida", "Indore", "Jhansi"]
 num_records = 200000
+
+# Generate unique string
+def unique_string(city):
+    unique_string = city + str(uuid.uuid4())
+    return (unique_string)
 
 # Generate data for hospitals
 def generate_hospitals_data(city):
@@ -13,7 +18,8 @@ def generate_hospitals_data(city):
     hospitals = []
 
     for _ in range(num_hospitals):
-        hospital_name = f"{city} Hospital {random.randint(1, 100)}"
+        
+        hospital_name = unique_string(city)
         beds_available = random.randint(50, 200)
         covid_beds_available = random.randint(10, beds_available)
         non_covid_beds_available = beds_available - covid_beds_available
